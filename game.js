@@ -11,8 +11,8 @@ window.onload = function()
         let evt = window.event || e;
         document.getElementById("result").innerHTML = "Mouse position: (" + evt.clientX + "," + evt.clientY + ")"
 
-        if (evt.clientX === Math.floor(xcord*window.innerWidth) && evt.clientY === Math.floor(ycord*window.innerHeight)) {
-            alert('test');
+        if ((evt.clientX < Math.floor(xcord*window.innerWidth) + 20 && evt.clientX > Math.floor(xcord*window.innerWidth) - 20) && (evt.clientY < Math.floor(ycord*window.innerHeight) + 20 && evt.clientY > Math.floor(ycord*window.innerHeight) - 20)) {
+            alert('You Win!');
         }
             console.log('xcordfloor = ' + Math.floor(xcord*window.innerWidth))
             console.log('ycordfloor = ' + Math.floor(ycord*window.innerHeight))

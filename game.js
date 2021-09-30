@@ -43,7 +43,7 @@ window.onload = function()
     console.log('ycordfloor = ' + Math.floor(ycord*window.innerHeight))
     window.onresize = function()
     {
-       document.getElementById("treasure").innerHTML = "Winning coordinates: (" + Math.floor(xcord*window.innerWidth) + "," + Math.floor(ycord*window.innerHeight) + ")";
+       //document.getElementById("treasure").innerHTML = "Winning coordinates: (" + Math.floor(xcord*window.innerWidth) + "," + Math.floor(ycord*window.innerHeight) + ")";
     }
     
 }

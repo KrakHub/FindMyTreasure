@@ -1,8 +1,8 @@
 let xcord = Math.random();
 let ycord = Math.random();
 let clicks = 0;
-console.log('xcord = ' + xcord)
-console.log('ycord = ' + ycord)
+//console.log('xcord = ' + xcord)
+//console.log('ycord = ' + ycord)
 //document.getElementById("treasure").innerHTML = "Winning coordinates: (" + Math.floor(xcord*window.innerWidth) + "," + Math.floor(ycord*window.innerHeight) + ")";
 
 window.onload = function()

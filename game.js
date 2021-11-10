@@ -15,7 +15,7 @@ window.onload = function()
         document.getElementById("clicks").innerHTML = clicks;
 
         if ((evt.clientX < Math.floor(xcord*window.innerWidth) + 20 && evt.clientX > Math.floor(xcord*window.innerWidth) - 20) && (evt.clientY < Math.floor(ycord*window.innerHeight) + 20 && evt.clientY > Math.floor(ycord*window.innerHeight) - 20)) {
-            alert('You Win!');
+            alert('You win with a score of ' + clicks + '!');
         }
         else if ((evt.clientX < Math.floor(xcord*window.innerWidth) + 35 && evt.clientX > Math.floor(xcord*window.innerWidth) - 35) && (evt.clientY < Math.floor(ycord*window.innerHeight) + 35 && evt.clientY > Math.floor(ycord*window.innerHeight) - 35)) {
             document.getElementById("prox").innerHTML = "🔥🔥🔥";

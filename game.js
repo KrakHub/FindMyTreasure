@@ -1,21 +1,34 @@
-let xcord = Math.random();
-let ycord = Math.random();
-let clicks = 0;
+let xcord;
+let ycord;
+let clicks;
+let highscore = NaN;
+
+function init() {
+    xcord = Math.random();
+    ycord = Math.random();
+    if (clicks < highscore || highscore == NaN) {
+        highscore = clicks;
+    }
+    document.getElementById("highscore").innerHTML = "High Score: " + highscore; 
+    clicks = 0;
+}
+init();
+
 //console.log('xcord = ' + xcord)
 //console.log('ycord = ' + ycord)
 //document.getElementById("treasure").innerHTML = "Winning coordinates: (" + Math.floor(xcord*window.innerWidth) + "," + Math.floor(ycord*window.innerHeight) + ")";
 
 window.onload = function()
 {
-    window.onclick = function(e)
+    window.onclick = function(evt)
     {
-        let evt = window.event || e;
         document.getElementById("result").innerHTML = "Mouse position: (" + evt.clientX + "," + evt.clientY + ")";
         clicks++;
         document.getElementById("clicks").innerHTML = clicks;
 
         if ((evt.clientX < Math.floor(xcord*window.innerWidth) + 20 && evt.clientX > Math.floor(xcord*window.innerWidth) - 20) && (evt.clientY < Math.floor(ycord*window.innerHeight) + 20 && evt.clientY > Math.floor(ycord*window.innerHeight) - 20)) {
             alert('You win with a score of ' + clicks + '!');
+            init();
         }
         else if ((evt.clientX < Math.floor(xcord*window.innerWidth) + 35 && evt.clientX > Math.floor(xcord*window.innerWidth) - 35) && (evt.clientY < Math.floor(ycord*window.innerHeight) + 35 && evt.clientY > Math.floor(ycord*window.innerHeight) - 35)) {
             document.getElementById("prox").innerHTML = "🔥🔥🔥";
@@ -39,11 +52,12 @@ window.onload = function()
             document.getElementById("prox").innerHTML = "🧊";
         } 
     }
-    console.log('xcordfloor = ' + Math.floor(xcord*window.innerWidth))
-    console.log('ycordfloor = ' + Math.floor(ycord*window.innerHeight))
+
     window.onresize = function()
     {
-       //document.getElementById("treasure").innerHTML = "Winning coordinates: (" + Math.floor(xcord*window.innerWidth) + "," + Math.floor(ycord*window.innerHeight) + ")";
+        //console.log('xcordfloor = ' + Math.floor(xcord*window.innerWidth))
+        //console.log('ycordfloor = ' + Math.floor(ycord*window.innerHeight))
+        //document.getElementById("treasure").innerHTML = "Winning coordinates: (" + Math.floor(xcord*window.innerWidth) + "," + Math.floor(ycord*window.innerHeight) + ")";
     }
     
 }

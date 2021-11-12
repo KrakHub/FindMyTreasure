@@ -1,12 +1,12 @@
 let xcord;
 let ycord;
 let clicks;
-let highscore = NaN;
+let highscore;
 
 function init() {
     xcord = Math.random();
     ycord = Math.random();
-    if (clicks < highscore || highscore == NaN) {
+    if (clicks < highscore || highscore == undefined) {
         highscore = clicks;
     }
     document.getElementById("highscore").innerHTML = "High Score: " + highscore; 

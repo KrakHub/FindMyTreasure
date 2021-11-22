@@ -2,5 +2,8 @@ body {
     background-image: url('/resource/image/sandbg.png');
     background-size:64px;
     image-rendering: pixelated;
-    }
+}
+
+.text {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
